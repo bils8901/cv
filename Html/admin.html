@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GCC</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/3e222edc62.js" crossorigin="anonymous"></script>
+
+  <!-- Page title icon -->
+  <link rel="icon" href="logo.png">
+
+  <link rel="stylesheet" href="../css/style.css">                                                         
+  
+</head>
+       
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="admin.html"><img class="logo" src="../images/logo.png" alt="Logo"></a>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse-main">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="admin.html" class="active hover"><span class="glyphicon glyphicon-user"></span>Dashboard</a></li>
+                  <li><a href="settings.html" class="active hover"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
+                  <li><a href="adminLogin.html" class="active hover"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+                </ul>
+
+                <div class="title">
+                    <h3><center>Welcome!</center></h3>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <!-- Search area -->
+    <div class="container-fluid text-center section1">
+        <div class="row">
+            <div class="col-sm-2">
+                <!-- <h3>Hello</h3> -->
+            </div>
+
+            <div class="col-sm-8">
+                <!-- <i class="fa fa-search fa-lg fa-fw" aria-hidden="true"></i> -->
+                <input id="search" type="text" placeholder="Search">                
+            </div>
+
+            <div class="col-sm-2">
+                <button class="add-student" data-toggle="modal" data-target="#add_student_modal">Add Student</button>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal -->
+  <div class="modal fade" id="add_student_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-bold text-center" id="exampleModalLongTitle">Add Student</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div id="form2">
+            <div class="form-group">
+              <label for="surname">Surname:</label>
+              <input type="text" class="form-control" id="surname">
+            </div>
+            <div class="form-group">
+              <label for="first_name">First name:</label>
+              <input type="text" class="form-control" id="first_name">
+            </div>
+            <div class="form-group">
+              <label for="other_names">Other names:</label>
+              <input type="text" class="form-control" id="other_names">
+            </div>
+            <div class="form-group">
+              <label for="DOB">Date of birth:</label>
+              <input type="date" class="form-control" id="DOB">
+            </div>
+            <div class="form-group">
+              <label for="IDP">IDP Camp:</label>
+              <input type="text" class="form-control" id="IDP">
+            </div>
+
+            <div class="form-group">
+              <label for="custom_fields">Custom fields:</label>
+              <input type="text" class="form-control" id="custom_fields">
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class=" btn-outline" data-dismiss="modal">Cancel</button>
+        <button type="button" class=" add-student">Add Students</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Tables -->
+    <div class="export-table-parent">
+        <table id="export">
+            <tr>
+              <th><i class="fas fa-file-excel"></i></i> Export Excel</th>
+              <th><i class="fas fa-file-csv"></i></i> Export CSV</th>
+              <th><i class="fas fa-file-pdf"></i> Export PDF</th>
+            </tr>
+    
+          </table>
+    </div>
+
+    <div class="students-table-parent">
+        <table id="students">
+            <tr>
+              <th>S/N</th>
+              <th>Name of Student</th>
+              <th>Level</th>
+              <th>Progress</th>
+              <th>Last Seen</th>
+              <th></th>
+            </tr>
+    
+            <tr>
+              <td>1</td>
+              <td>Hafsat Musa Adam</td>
+              <td>3</td>
+              <td>50.00%</td>
+              <td>01:00pm 20/06/2020</td>
+              <td>
+                  <div class="buttons">
+                    <a href="studentDetails.html" class="view-btn">View</button>
+                    <a href="#" class="edit-btn">Edit</button>
+                  </div>
+              </td>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>Saratu Samuel </td>
+                <td>2</td>
+                <td>33.33%</td>
+                <td>01:00pm 20/07/2020</td>
+                <td>
+                    <div class="buttons">
+                        <a href="studentDetails.html" class="view-btn">View</button>
+                        <a href="#" class="edit-btn">Edit</button>
+                    </div>
+                </td>
+              </tr>
+           
+          </table>
+    </div>
+
+        
+</body>
+</html>
